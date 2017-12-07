@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    </head>
+    <body>
+        {% if ninja_color == "purple" %}
+            <h1>Donatello!</h1>
+            <img src="{{url_for('static',filename='img/donatello.jpg')}}">
+        {% elif ninja_color == "blue" %}
+            <h1>Leonardo!</h1>
+            <img src="{{url_for('static',filename='img/leonardo.jpg')}}">
+        {% elif ninja_color == "orange" %}
+            <h1>Michelangelo!</h1>
+            <img src="{{url_for('static',filename='img/michelangelo.jpg')}}">
+        {% elif ninja_color == "red" %}
+            <h1>Raphael!</h1>
+            <img src="{{url_for('static',filename='img/raphael.jpg')}}">
+        {% else %}
+            <h1>OOPS! There's no ninjas here, either.</h1>
+            <img src="{{url_for('static',filename='img/notapril.jpg')}}">
+        {% endif %}
+    </body>
+</html>
