@@ -3,7 +3,6 @@ Kavita Amin
 11/26/2017
 '''
 
-
 from flask import Flask, render_template, session
 app = Flask(__name__)
 app.secret_key = 'SecretKey'
