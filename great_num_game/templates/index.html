@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    </head>
+    <body>
+        <h1>Welcome to the Great Number Game!</h1>
+        <p> I am thinking of a number between 1 and 100</p>
+        <p> Take a guess!</p>
+
+        <!-- checks if user guess is correct, displays message -->
+        {% if session['guess'] == 0 %}
+         
+        {% elif session['randomNum'] == session['guess'] %}
+        <div>
+            <p>You guessed it!</p>
+            <form action="/play_again"><input type="submit" value="play again!"></form>
+        </div>  
+
+        {% elif session['randomNum'] < session['guess']%}
+        <div class="high"><p>Sorry, your guess is too high!</p></div>
+
+        {% elif session['randomNum'] > session['guess']%}
+        <div class="low"><p>Sorry, your guess is too low!</p></div>
+        
+        {% endif %}
+
+        <form action="/process" method="post">
+            <input type="number" name="guess" placeholder="Enter a number">
+            <input type="submit" value="I'm feeling lucky!">
+        </form>
+    </body>
+</html> 
