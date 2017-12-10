@@ -1,0 +1,23 @@
+body {
+    background: lightgray; 
+}
+
+.building {
+    outline: 1px solid gray; 
+    display: inline-block; 
+    margin: 0 auto; 
+    text-align: center;
+    height: 200px; 
+    width: 200px; 
+}
+
+.activities {
+    outline: 1px solid gray; 
+    height: 200px; 
+    width: 810px; 
+    overflow: scroll; 
+}
+
+li {
+    list-style: none; 
+}
