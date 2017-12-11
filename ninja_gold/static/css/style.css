@@ -1,9 +1,11 @@
 body {
-    background: lightgray; 
+    background: rgb(58, 144, 184); 
+    font-family: 'Indie Flower', cursive;
+    color: white; 
 }
 
 .building {
-    outline: 1px solid gray; 
+    outline: 1px solid rgb(220, 227, 248); 
     display: inline-block; 
     margin: 0 auto; 
     text-align: center;
@@ -11,11 +13,37 @@ body {
     width: 200px; 
 }
 
+.farm {
+    background-image: url('/static/images/farm.jpg');
+    background-color: rgba(0,0,0,.4);
+    background-blend-mode: darken;
+}   
+
+.cave {
+    background-image: url('/static/images/cave.jpg');
+    background-color: rgba(0,0,0,.4);
+    background-blend-mode: darken;
+}
+
+.house {
+    background-image: url('/static/images/house.jpg');
+    background-color: rgba(0,0,0,.4);
+    background-blend-mode: darken;
+}
+
+.casino {
+    background-image: url('/static/images/casino.jpg');
+    background-color: rgba(0,0,0,.4);
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
 .activities {
-    outline: 1px solid gray; 
+    outline: 1px solid rgb(133, 154, 247); 
     height: 200px; 
     width: 810px; 
     overflow: scroll; 
+    background: rgb(239, 240, 245); 
 }
 
 li {
