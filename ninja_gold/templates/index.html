@@ -2,13 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
     </head>
     <body>
         <h2>Your gold: {{ session["gold"] }}</h2>
         <div class="locations">
             <!-- Farm -->
-            <div class="building">
+            <div class="building farm">
                 <h3>Farm</h3>
                 <p>(earns 10-20 golds)</p>
                 <form action="/process_money" method="post">
@@ -17,7 +18,7 @@
                 </form>
             </div>
            <!-- Cave -->
-            <div class="building">
+            <div class="building cave">
                 <h3>Cave</h3>
                 <p>(earns 5-10 golds)</p>
                 <form action="/process_money" method="post">
@@ -26,7 +27,7 @@
                 </form>
             </div>
             <!-- House -->
-            <div class="building">
+            <div class="building house">
                 <h3>House</h3>
                 <p>(earns 2-5 golds)</p>
                 <form action="/process_money" method="post">
@@ -35,7 +36,7 @@
                 </form>
             </div>
             <!-- Casino -->
-            <div class="building">
+            <div class="building casino">
                 <h3>Casino</h3>
                 <p>(earns/takes 0-50 golds)</p>
                 <form action="/process_money" method="post">
@@ -44,14 +45,14 @@
                 </form>
             </div>
         </div>
-        <h6>Activities:</h6>
+        <h5>Activities:</h5>
         <div class="activities">
             <ul>
             {% for activity in session['activities'] %}
                 {% if "lost" not in activity %}
-                <li style="color:green";>{{ activity }}</li>
+                <li style="color:rgb(10, 177, 10)";>{{ activity }}</li>
                 {% else %}
-                <li style="color:red";>{{ activity }}</li>
+                <li style="color:rgb(235, 42, 42)";>{{ activity }}</li>
                 {% endif %}
             {% endfor %}
             </ul>
