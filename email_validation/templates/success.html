@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <p>The email address you entered {{ entered }} is a VALID email address in the database! Thank you!</p>
+
+        <h4>Email Addresses Entered:</h4>
+        {% for address in email: %}
+            <p>{{ address['address'] }} at {{ address['created_at'] }}</p>
+        {% endfor %} 
+
+    </body>
+</html>
