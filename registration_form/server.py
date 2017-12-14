@@ -1,12 +1,6 @@
 """
 Kavita Amin
 12/3/2017
-Registration Form: Validations and Flashing Errors
-All fields are required and must not be blank
-First and Last Name cannot contain any numbers
-Password should be more than 8 characters
-Email should be a valid email
-Password and Password Confirmation should match
 """
 
 
