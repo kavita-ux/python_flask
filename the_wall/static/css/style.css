@@ -1,0 +1,98 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Open Sans Condensed', sans-serif;
+    /* outline: 1px red solid;  */
+}
+body {
+    background: #ffd0c8; 
+}
+#wall_container {
+    background: #ffd0c8; 
+    padding-left: 30px; 
+}
+#index_container * {
+    display: block; 
+    text-align: center; 
+    margin: 0 auto; 
+    text-decoration: none; 
+}
+#login_container * {
+    display: block; 
+    text-align: center; 
+    margin: 0 auto; 
+}
+#registration_container * {
+    display: block; 
+    text-align: center; 
+    margin: 0 auto; 
+}
+.button {
+    background: #dd614a; 
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-bottom: 10px !important; 
+
+}
+.button a {
+    text-decoration: none; 
+}
+input[type=text], input[type=password] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px;
+}
+
+.error {
+    color: red; 
+}
+
+.colored-nav{
+    background:#f48668;
+    width:100%;
+    padding-top:15px;
+    padding-bottom:35px;
+    font-size:14px;
+    padding-left:20px;
+    border-bottom: #dd614a 3px solid;
+  }
+
+.colored-nav ul {
+    float: right; 
+    padding-right: 20px; 
+}
+.colored-nav li { 
+    margin-right: 0px; 
+    display: inline; 
+    padding: 20px; 
+}
+.colored-nav li a { 
+    color: white;
+}
+  
+.logo{
+    float:left;
+    color:white;
+    font-weight:600;
+    margin-right:15px;
+    margin-left:20px;
+    padding-right:30px; 
+  }
+ h4 {
+     padding-top: 20px;  
+ }
+ h1 {
+     font-size: 40px; 
+     padding: 15px 0px; 
+ }
+
+ #wall_container ul {
+     margin-left: 50px; 
+ }
+
+ #wall_container li {
+     list-style: none; 
+     margin-bottom: 20px; 
+ }

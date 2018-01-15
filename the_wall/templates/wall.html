@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Welcome Page</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    </head>
+    <body>
+        <nav class="colored-nav">
+            <a class="logo" href="/">The Wall</a></div>
+            <ul>
+                <li><a href="/">Welcome, {{ username }}</a></li>
+                <li><a href="/logoff">Log Off</a></li>
+            </ul>
+        </nav>
+        <div id="wall_container">
+            
+            <!-- messages form -->
+            <h4>Post a Message</h4>
+            <form action="/message_process" method="post" id="message">
+                <textarea name="message" form="message" cols='70' rows='3' placeholder="Post a message..."></textarea>
+                <input type="submit" value="Post">
+            </form>
+            <br/>
+            <br/>
+            <hr>
+
+
+
+            <div class="message">
+                {% for messages in resultSetMessages %}
+                <br/>
+                    <h4>{{ messages['first_name']}} wrote at {{ messages['created_at']}}: </h4>
+                    <p>{{ messages['message'] }}</p>
+                <br/>
+                    <!-- While iterating through each message, print any comments that link to that message.-->
+                    {% for comment in resultSetComments %}
+                        {% if comment['messages_id'] == messages['id'] %}
+                            <ul id='comments'>
+                                <h4>{{ comment['first_name']}} {{ comment['created_at']}}</h4>
+                                <li>{{ comment['comment'] }}</li>
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+
+                        <!-- unique comments form  for each message-->
+                        <form action='/comment_process' method='post'>
+                            <textarea name='comment' rows='1' cols='80' placeholder="Enter a comment" id='comment_textarea'></textarea>
+                            <br>
+                            <!-- this hidden input links each comment to its unique message -->
+                            <input type='hidden' name='msg_id' value = {{ messages['id'] }} >                    
+                            <input type='submit' value='post a comment' id='comment_submit_btn'>
+                        </form>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
